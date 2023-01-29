@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "NativeApplication",
-    "slug": "NativeApplication",
+    "slug": "mynativeapplication",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -32,6 +32,12 @@
     },
     "plugins": [
       "react-native-pytorch-core"
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "fd198fd0-b406-4d12-ad2b-cb42ac69e202",
+      }
+    },
+    "owner": "lmpirkos"
   }
 }

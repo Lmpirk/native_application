@@ -1,12 +1,21 @@
 import { StyleSheet, View } from "react-native";
+
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { StackActions } from "@react-navigation/native";
-import HomeScreen, {screenOptions as HomeScreenOptions } from "../screens/home/HomeScreen";
-import InfoScreen, {screenOptions as InfoScreenOptions} from "../screens/home/InfoScreen";
+
+import HomeScreen, {
+    screenOptions as HomeScreenOptions,
+} from "@screens/home/HomeScreen";
+import InfoScreen, {
+    screenOptions as InfoScreenOptions,
+} from "@screens/home/InfoScreen";
+import CameraScreen, {
+    screenOptions as CameraScreenOptions,
+} from "@screens/camera/CameraScreen";
+import DiscoveriesScreen, {
+    screenOptions as DiscoveriesScreenOptions,
+} from "@screens/home/DiscoveriesScreen";
 
 const Stack = createNativeStackNavigator();
-
-
 
 const HomeNavigator = () => {
     return (
@@ -21,6 +30,16 @@ const HomeNavigator = () => {
                     name="Info"
                     component={InfoScreen}
                     options={InfoScreenOptions}
+                />
+                <Stack.Screen
+                    name="Camera"
+                    component={CameraScreen}
+                    options={CameraScreenOptions}
+                />
+                <Stack.Screen
+                    name="Discoveries"
+                    component={DiscoveriesScreen}
+                    options={DiscoveriesScreen}
                 />
             </Stack.Navigator>
         </View>

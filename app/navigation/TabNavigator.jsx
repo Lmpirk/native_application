@@ -16,14 +16,15 @@ const TabNavigator = () => {
     const navigationOptions = {
         initialRouteName: "HomeStack",
         screenOptions: {
-            headerShown: false,
+            headerShown: true,
             headerTransparent: true,
-            tabBarActiveTintColor: "blue",
+            tabBarActiveTintColor: "#007AFF",
         },
         shifting: true,
-        activeColor: "blue",
+        activeColor: "#007AFF",
         barStyle: {
-            backgroundColor: "red",
+            backgroundColor: "#fff",
+            height: 70,
         },
     };
 
