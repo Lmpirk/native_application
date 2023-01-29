@@ -11,6 +11,8 @@ import {
 import ListItem from "@components/ui/ListItem";
 import { useCallback } from "react";
 
+import * as ImageNetClasses from "@screens/camera/ImageNetClasses.json";
+
 const HomeScreen = () => {
     const navigation = useNavigation();
 
@@ -26,6 +28,7 @@ const HomeScreen = () => {
         navigation.navigate("Discoveries");
     };
 
+    console.log(ImageNetClasses)
     return (
         <View style={styles.container}>
             <ListItem
