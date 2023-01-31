@@ -5,7 +5,6 @@ import store from "./app/store"
 
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
-
 import Screen from "@components/ui/Screen";
 import AppNavigator from "@navigation/AppNavigator";
 

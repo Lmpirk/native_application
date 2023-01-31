@@ -13,7 +13,8 @@ import { OverflowMenuProvider } from "react-navigation-header-buttons";
 const AppNavigator = () => {
     const dispatch = useDispatch();
 
-    const isLoggedIn = useSelector(state => !!state.user);
+    const isLoggedIn = useSelector(state => state.user?.user);
+    console.log(isLoggedIn)
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
@@ -40,8 +41,7 @@ const AppNavigator = () => {
         <NavigationContainer>
             <OverflowMenuProvider>
                 <View style={styles.mainScreen} onLayout={handleRenderRootView}>
-                    {/* {isLoggedIn ? <TabNavigator /> : <AuthNavigator />} */}
-                    <TabNavigator />
+                    {isLoggedIn ? <TabNavigator /> : <AuthNavigator />}
                 </View>
             </OverflowMenuProvider>
         </NavigationContainer>

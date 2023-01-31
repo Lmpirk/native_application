@@ -28,7 +28,6 @@ const HomeScreen = () => {
         navigation.navigate("Discoveries");
     };
 
-    console.log(ImageNetClasses)
     return (
         <View style={styles.container}>
             <ListItem
